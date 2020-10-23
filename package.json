@@ -1,18 +1,24 @@
 {
-  "name": "example-create-react-app-express",
-  "version": "1.0.0",
-  "scripts": {
-    "client": "cd client && npm start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4"
-  },
-  "devDependencies": {
-    "concurrently": "^4.0.1"
-  }
+	"name": "example-create-react-app-express",
+	"version": "1.0.0",
+	"scripts": {
+		"client": "cd client && npm start",
+		"server": "nodemon ./src/server.js",
+		"dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+		"start": "node server.js",
+		"heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"express": "^4.16.4",
+		"lodash": "^4.17.20",
+		"request": "^2.88.2",
+		"request-promise": "^4.2.6",
+		"shortid": "^2.2.16",
+		"swagger-jsdoc": "^4.3.1",
+		"swagger-ui-express": "^4.1.4"
+	},
+	"devDependencies": {
+		"concurrently": "^4.0.1"
+	}
 }

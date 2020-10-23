@@ -1,0 +1,12 @@
+ securityDefinitions:
+   basicAuth:
+     type: basic
+# Common definitions.
+ definitions:
+   Error:
+     type: object
+     properties:
+       error:
+         type: string
+       ticketId:
+         type: string
