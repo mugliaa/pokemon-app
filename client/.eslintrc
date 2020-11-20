@@ -1,0 +1,45 @@
+{
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"jest": true
+	},
+	"plugins": [
+		"react",
+		"jsdoc",
+		"require-jsdoc"
+	],
+	"parser": "babel-eslint",
+	"rules": {
+		"require-jsdoc": ["error", {
+			"require": {
+				"FunctionDeclaration": true,
+				"MethodDefinition": true,
+				"ClassDeclaration": true,
+				"ArrowFunctionExpression": true,
+				"FunctionExpression": true
+			}
+		}],
+		"jsdoc/check-param-names": 2,
+		"jsdoc/check-tag-names": 2,
+		"jsdoc/check-types": 2,
+		"jsdoc/newline-after-description": 2,
+		"jsdoc/no-undefined-types": 2,
+		"jsdoc/require-description-complete-sentence": 2,
+		"jsdoc/require-example": 0,
+		"jsdoc/require-hyphen-before-param-description": 2,
+		"jsdoc/require-param": 2,
+		"jsdoc/require-param-description": 2,
+		"jsdoc/require-param-name": 2,
+		"jsdoc/require-param-type": 2,
+		"jsdoc/require-returns-description": 2,
+		"jsdoc/require-returns-type": 2,
+		"jsdoc/valid-types": 2
+	},
+	"settings": {
+		"jsdoc": {
+			"tagNamePreference": ["component"]
+		}
+	}
+}

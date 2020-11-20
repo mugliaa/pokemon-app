@@ -1,4 +1,5 @@
 const _ = require('lodash');
+
 const { proxyRequest, generateOutgoingHeaders } = require("../proxy/proxyUtil");
 
 const transform = (body, response) => {

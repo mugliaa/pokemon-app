@@ -2,6 +2,12 @@ import React from 'react';
 import Select from "react-select";
 import { useForm, Controller } from 'react-hook-form';
 
+/**
+ * This is used as the base view of the category search component.
+ *
+ * @component BetterSelect
+ * @inheritdoc
+ */
 const BetterSelect = ({ name, onBlur, onChange, options, value }) => (
     <Select
         isSearchable={false}
@@ -21,7 +27,14 @@ const BetterSelect = ({ name, onBlur, onChange, options, value }) => (
  */
 const CategorySearchView = () => {
     const { control, errors, handleSubmit } = useForm();
+
+    /**
+     * Handles submission of the form.
+     *
+     * @param {object} data - The form values. 
+     */
     const onSubmit = (data) => console.log(data);
+
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <Controller
