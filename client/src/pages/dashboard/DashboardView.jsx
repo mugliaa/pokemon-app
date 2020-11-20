@@ -15,7 +15,7 @@ const DashboardView = () => (
             </div>
         </div>
         <div className="row">
-            <div className="col-2">
+            <div className="col">
                 <CategorySearchContainer />
             </div>
         </div>

@@ -2,7 +2,7 @@ module.exports = require('swagger-jsdoc')({
 	definition: {
 		basePath: '/api',
 		info: {
-			title: 'API for Pokemon App',
+			title: 'API for Pokemon API Gateway',
 			version: '1.0.0',
 			contact: {
 				name: 'Adam Muglia',

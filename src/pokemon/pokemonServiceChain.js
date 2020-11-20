@@ -2,13 +2,18 @@ const _ = require('lodash');
 const { proxyRequest, generateOutgoingHeaders } = require("../proxy/proxyUtil");
 
 const transform = (body, response) => {
+	const keys = { is_hidden: 'isHidden' };
 	return {
 		...response,
 		body: response.statusCode === 200
 			? {
 				id: body.id,
 				name: body.name,
-				abilities: body.abilities,
+				abilities: body.abilities.map((obj) => (
+					_.mapKeys(obj, (value, key) => (
+						key in keys ? keys[key] : key
+					))
+				)),
 				baseExperience: body.base_experience,
 			}
 			: undefined,

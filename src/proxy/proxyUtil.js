@@ -89,27 +89,6 @@ const handleRequestError = (error, response, clientRequest) => {
 };
 
 /**
- * Handles passing the auth challenge response back to the client.
- *
- * @param {Response} serverResponse - The response from the server.
- * @param {Response} clientResponse - The response that will be sent to the client.
- */
-const respondWith401 = (serverResponse, clientResponse) => {
-	const { statusMessage } = serverResponse;
-	clientResponse.status(401).json({ error: statusMessage });
-};
-
-/**
- * Handles returning an empty response with a 404 status code.
- *
- * @param {Response} serverResponse - The response from the server.
- * @param {Response} clientResponse - The response that will be sent to the client.
- */
-const respondWith404 = (serverResponse, clientResponse) => {
-	clientResponse.status(404).json();
-};
-
-/**
  * Handles returning the appropriate response when the underlying service returns a 500 response.
  *
  * @param {Response} serverResponse - The response from the server.
@@ -141,7 +120,5 @@ module.exports = {
 	logError,
 	proxyRequest,
 	respondWith200,
-	respondWith401,
-	respondWith404,
 	respondWith502,
 };

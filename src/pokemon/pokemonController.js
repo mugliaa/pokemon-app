@@ -1,6 +1,5 @@
 const {
 	respondWith200,
-	respondWith401,
 	respondWith502,
 	handleRequestError,
 } = require('../proxy/proxyUtil');
@@ -45,10 +44,14 @@ const { chainPokemonCalls } = require('./pokemonServiceChain');
  *                       properties:
  *                         name:
  *                           type: string
+ *                         url:
+ *                           type: string
  *                     isHidden:
  *                       type: boolean
- *                 baseExperience:
- *                   type: number
+ *                     slot:
+ *                       type: number
+ *               baseExperience:
+ *                 type: number
  *       502:
  *         description: The underlying service encountered an exception.
  *         schema:
